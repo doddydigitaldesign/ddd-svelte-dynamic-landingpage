@@ -1,5 +1,5 @@
 
-(function(l, i, v, e) { v = l.createElement(i); v.async = 1; v.src = '//' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; e = l.getElementsByTagName(i)[0]; e.parentNode.insertBefore(v, e)})(document, 'script');
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -577,7 +577,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (130:2) {:else}
+    // (124:2) {:else}
     function create_else_block(ctx) {
     	var t0, h3, t2, ul, current;
 
@@ -603,8 +603,8 @@ var app = (function () {
     			for (var i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
-    			add_location(h3, file$3, 131, 4, 3338);
-    			add_location(ul, file$3, 132, 4, 3362);
+    			add_location(h3, file$3, 125, 4, 3306);
+    			add_location(ul, file$3, 126, 4, 3331);
     		},
 
     		m: function mount(target, anchor) {
@@ -671,7 +671,7 @@ var app = (function () {
     	};
     }
 
-    // (128:2) {#if inputName_value === 'human'}
+    // (122:2) {#if inputName_value === 'human'}
     function create_if_block(ctx) {
     	var current;
 
@@ -707,7 +707,7 @@ var app = (function () {
     	};
     }
 
-    // (134:6) {#each todo_value as item}
+    // (128:6) {#each todo_value as item}
     function create_each_block(ctx) {
     	var li, t_value = ctx.item, t;
 
@@ -715,7 +715,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$3, 134, 8, 3408);
+    			add_location(li, file$3, 128, 8, 3379);
     		},
 
     		m: function mount(target, anchor) {
@@ -770,7 +770,7 @@ var app = (function () {
     			t5 = text("!");
     			t6 = space();
     			if_block.c();
-    			add_location(h2, file$3, 126, 2, 3211);
+    			add_location(h2, file$3, 120, 2, 3174);
     			main.id = "mainId";
     			set_style(main, "background-size", "100% 100%");
     			set_style(main, "background-repeat", "no-repeat");
@@ -779,8 +779,8 @@ var app = (function () {
     			set_style(main, "background-position", "center");
     			set_style(main, "width", "100vw");
     			set_style(main, "height", "100vh");
-    			set_style(main, "box-shadow", "inset\n  0px 0px 50px 10px #000000");
-    			add_location(main, file$3, 119, 0, 2934);
+    			set_style(main, "box-shadow", "inset\r\n  0px 0px 50px 10px #000000");
+    			add_location(main, file$3, 113, 0, 2890);
     		},
 
     		l: function claim(nodes) {
@@ -872,6 +872,7 @@ var app = (function () {
 
     	
 
+    // Update greeting and background based on time of day -> see styling of <main>-tag below
       let hours = $time.getHours();
       let timeOfDay = "morning";
       let timesOfDay = ["morning", "afternoon", "evening"];
@@ -888,7 +889,7 @@ var app = (function () {
         $$invalidate('timeOfDay', timeOfDay = timesOfDay[2]);
         $$invalidate('bgSrc', bgSrc = timeOfDay);
       }
-
+    // Update store with user name and todos, also subscribe
       let inputName_value;
       let todo_value;
       const unsubscribe = [
