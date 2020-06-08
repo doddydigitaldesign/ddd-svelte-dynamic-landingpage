@@ -1,4 +1,4 @@
-<script>
+<script type="text/typescript">
 	import { time } from './store.js';
 
 	const formatter = new Intl.DateTimeFormat('en', {

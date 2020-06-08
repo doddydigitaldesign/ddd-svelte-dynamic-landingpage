@@ -1,4 +1,4 @@
-<script>
+<script type="text/typescript">
     import { inputName } from './store.js';
     let name = '';
     function changeName() {

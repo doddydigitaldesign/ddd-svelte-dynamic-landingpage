@@ -1,4 +1,4 @@
-<script>
+<script type="text/typescript">
     import { todo } from './store.js';
 
     let todoInput = '';

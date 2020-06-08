@@ -1,4 +1,4 @@
-<script>
+<script type="text/typescript">
   import { onMount } from "svelte";
   import { inputName, todo, time } from "./store.js";
   import Clock from "./Clock.svelte";
